@@ -14,94 +14,61 @@ body {
 .logo {
   color: white;
   font-size: 40px;
+  font-weight: 700;
   text-align: start;
 }
-
-header {
-  background-color: grey;
+.navbar .container-fluid{
+  background-color: grey; 
 }
 
-h1 {
-  font-size: 70px;
 
+
+h1 {
+  font-size: 40px;
   font-weight: 300;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: aliceblue;
-}
-
-h1 {
   color: black;
-  margin: 40px;
+
 }
 
-.navbar {
-  list-style: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin: 15px;
-}
-
-.boton {
-  color: white;
-  background-color: grey;
-  border: solid 2px grey;
-  text-transform: uppercase;
-  padding: 8px 20px;
-}
-
-.boton:hover {
-  color: black;
-  background-color: white;
-  border: solid 2px black;
-}
-
-.navbar li a {
-  text-decoration: none;
-  color: aliceblue;
-  margin: 20px 10px;
-}
-/*MAIN*/
 
 /*HOME*/
 .bienvenido {
   background-image: url(../Img/esta.jpeg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
   text-align: center;
   width: 100%;
-  height: 80vh;
-}
-
-.bienvenido a {
-  text-decoration: none;
-  color: black;
-  background-color: aliceblue;
-  padding: 20px 30px;
-  font-size: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
 }
+
+
 .bienvenido h1 {
   font-size: 40 px;
   margin-bottom: 20 px;
 }
 
-.botonHero{
-  color: beige;
+.boton{
+  text-decoration: none;
+  color: gray;
+  background-color: white;
+  font-size: 20px;
+  width: 200px;
+  height: 60px;
+  margin: 80px 90px;
   }
 
-.botonHero:hover{
-  color: grey;
+.boton:hover{
+  background-color: grey;
+  color: black;
   }
 
 .estiloNordico {
-  background-image: url(../Img/bano-estilo-nordico-4-1608107418.jpeg);
+  background-image: url(../Img/nordica.png);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -109,24 +76,21 @@ header nav ul li {
   text-align: center;
   width: 100%;
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
-.estiloNordico a {
-  text-decoration: none;
-  color: black;
-  background-color: aliceblue;
-  padding: 30px 25px;
-  font-size: 35px;
-  padding: 30px 30px;
-}
+
 
 .estiloNordico h2 {
   font-size: 50px;
   width: fit-content;
+  padding: 40px;
+  margin: 30px;
 }
-.botonNordico:hover{
-  width: 500px;
-}
+
 
 .productos div img {
   width: 200px;
@@ -138,8 +102,8 @@ header nav ul li {
 }
 
 .ultimo  img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  aspect-ratio:1 / 1;
 }
 
 .ultimo  h2{
@@ -159,22 +123,38 @@ header nav ul li {
 
 .ultimoGrupo {
     display:flex ;
-    flex-direction: row;
+    flex-direction: row; 
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
+    gap: 25px; 
+    
+}
+
+@media screen and ( max-width: 756px) {
+  .destacados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:45px; }
+  .destacados .grupoDestacados {
+    justify-content: center;
+    align-items: center;
+    gap: 45px;}
+.cardDestacada h3 { margin-top: 15px;}
+.cardDestacada .boton { margin: 0px 90px;}
 }
 
 
 
 .ultimocardDestacada  {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center; 
 }
 
 
@@ -185,17 +165,19 @@ header nav ul li {
   height: 250px;
 }
 
-.destacados {
-  display: flex;
+@media screen and ( max-width: 756px) {
+  .destacados {display: flex;
   flex-direction: column;
   justify-content :center;
   align-items: center;
-  gap: 50px;
+  gap: 50px; }
+
 }
 
 .grupoDestacados {
     display:flex ;
-    flex-direction: row;
+    flex-direction: row; 
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
@@ -214,6 +196,10 @@ header nav ul li {
   align-items: center;
 }
 
+.carrusel div img {
+  width: 80%; height: 500px;
+}
+
 
 
 /*EMPRESA*/
@@ -228,6 +214,8 @@ header nav ul li {
   height: 100vh;
 }
 
+
+
 .empresa a {
   text-decoration: none;
   color: black;
@@ -235,17 +223,31 @@ header nav ul li {
   padding: 10px 15px;
 }
 .empresa h2 {
-  font-size: 70px;
+  font-size: 35px;
 }
 .empresa p {
   font-size: 30px;
   text-align: center;
   margin: 20px 15px;
 }
+
+
 /*PRODUCTOS*/
+
+.verProductos {display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  }
+  
+
+
 .verProductos div img {
-  width: 400;
-  height: 400px;
+  width: 500;
+  height: 500px;
+}
+.todos div img {
+  width: 300px;
+  height: 350px;
 }
 
 .verProductos div {
@@ -263,6 +265,51 @@ header nav ul li {
   padding: 3px 15px;
 }
 
+
+@media screen and ( max-width: 950px) {
+  .verProductos{display:grid;
+grid-template-columns: 1fr}
+  } 
+
+/*CONTACTO*/
+.consulta  {padding: 40px; margin: 40px;
+ }
+
+ .mb-3 {padding: 20px; margin: 20px;
+ }
+
+ .footerContacto div img {
+  width: 100px;
+  height: 100px;
+}
+
+/*SECCION SANITARIOS*/
+.sanitarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items:initial;
+}
+
+.sanitarios  div a {
+  text-decoration: none;
+  color: white;
+  background-color: grey;
+  padding: 20px;margin: 30px;
+font-size: 20px;
+}
+.sanitarios h3 {
+  font-size: 30px;color: grey; margin: 10px;
+}
+
+.sanitarios div img{
+  width: 300px; height: 500px;
+}
+
+.footerSanitarios { 
+  padding: 50px; margin: 40px;}
+
+
 /*FOOTER*/
 footer div img {
   width: 100px;
@@ -279,22 +326,35 @@ footer div img {
   height: 100px;
 }
 /*NOVEDADES*/
-.foa h2 {
-  font-size: 50px;
-}
-.foa img {
-  width: 500px;
-  height: 300px;
-}
 
-.foa2 img {
-  width: 500px;
-  height: 300px;
-  margin: 30px 20px;
-}
+.fotosFoa{display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 3fr 1fr 1fr 1fr; 
+gap: 10px;}
 
-.foa3 img {
-  width: 500px;
-  height: 300px;
-  margin: 30px 20px;
+.fotosFoa img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
+-webkit-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
+-moz-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
 }
+.estuvimos h2 {
+  font-size: 40px; color: gray; padding-bottom: 30px;
+}
+.prensa h2{font-size: 43px;color: grey; padding: 40px; margin: 10px}
+
+.publicaciones  {display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  }
+
+.publicaciones div img {
+  width: 500px;height: 400px;}
+
+@media screen and ( max-width: 450px) {
+.publicaciones{grid-template-columns: 1fr}
+} 
+
