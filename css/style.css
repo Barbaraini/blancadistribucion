@@ -339,6 +339,7 @@ grid-template-columns: 1fr  1fr;
     box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
 -webkit-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
 -moz-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
+padding: 20px;
 }
 .estuvimos h2 {
   font-size: 40px; color: gray; padding-bottom: 10px;
@@ -346,14 +347,19 @@ grid-template-columns: 1fr  1fr;
 .prensa h2{font-size: 43px;color: grey; padding: 10px; margin: 10px}
 
 .publicaciones  {display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr ;
+  gap: 20px;
  }
 
 .publicaciones div img {
   width: 350px;height: 350px;}
 
-@media screen and ( max-width: 450px) {
+@media screen and ( max-width: 710px) {
 .publicaciones{grid-template-columns: 1fr}
 } 
+
+@media screen and ( max-width: 659px) {
+  .fotosFoa{grid-template-columns: 1fr}
+  } 
 
