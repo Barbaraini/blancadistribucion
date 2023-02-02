@@ -6,8 +6,7 @@
   text-decoration: none;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+body {font-family: "Roboto", sans-serif;
 }
 
 /*-----HEADER----*/
@@ -226,8 +225,7 @@ h1 {
   font-size: 35px;
 }
 .empresa p {
-  font-size: 30px;
-  text-align: center;
+  font-size: 25px;
   margin: 20px 15px;
 }
 
@@ -235,19 +233,19 @@ h1 {
 /*PRODUCTOS*/
 
 .verProductos {display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr  1fr;
   grid-template-columns: 1fr 1fr;
   }
   
 
 
 .verProductos div img {
-  width: 500;
+  width: 450;
   height: 500px;
 }
 .todos div img {
-  width: 300px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
 }
 
 .verProductos div {
@@ -268,8 +266,16 @@ h1 {
 
 @media screen and ( max-width: 950px) {
   .verProductos{display:grid;
-grid-template-columns: 1fr}
+grid-template-columns: 
+1fr}
   } 
+
+  @media screen and ( max-width: 950px) {
+    .todos div {
+      width: 600px; 
+      height: 400;
+      gap: 15px}
+    ;} 
 
 /*CONTACTO*/
 .consulta  {padding: 40px; margin: 40px;
@@ -282,6 +288,20 @@ grid-template-columns: 1fr}
   width: 100px;
   height: 100px;
 }
+
+@media screen and ( max-width: 605px) {
+  .mapa {
+    width: 550px; 
+    height: 400;
+    gap: 15px}
+  ;} 
+
+  @media screen and ( max-width: 553px) {
+    .mapa {
+      width: 350px; 
+      height: 400;
+      gap: 15px}
+    ;} 
 
 /*SECCION SANITARIOS*/
 .sanitarios {
@@ -302,12 +322,52 @@ font-size: 20px;
   font-size: 30px;color: grey; margin: 10px;
 }
 
-.sanitarios div img{
-  width: 300px; height: 500px;
+.sanitarios img {
+  width: 500px; height: 500px;
 }
 
 .footerSanitarios { 
   padding: 50px; margin: 40px;}
+
+  /*NOVEDADES*/
+
+.fotosFoa{display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr  1fr; 
+  }
+  
+  .fotosFoa img{
+      width: 450px;
+      height: 300px;
+      object-fit: cover;
+      box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
+  -webkit-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
+  -moz-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
+  padding: 20px;
+  }
+  .estuvimos h2 {
+    font-size: 40px; color: gray; padding-bottom: 10px;
+  }
+  .prensa h2{font-size: 43px;color: grey; padding: 10px; margin: 10px}
+  
+  .publicaciones  {display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+   }
+  
+  .publicaciones div img {
+    width: 350px;height: 350px;}
+  
+  @media screen and ( max-width: 300px) {
+  .publicaciones{grid-template-columns: 1fr}
+  } 
+  
+  @media screen and ( max-width: 736px) {
+    .fotosFoa{grid-template-columns: 1fr}
+    } 
+  
+  
 
 
 /*FOOTER*/
@@ -325,41 +385,3 @@ footer div img {
   width: 100px;
   height: 100px;
 }
-/*NOVEDADES*/
-
-.fotosFoa{display: grid;
-grid-template-rows: 1fr 1fr;
-grid-template-columns: 1fr  1fr; 
-}
-
-.fotosFoa img{
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
--webkit-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
--moz-box-shadow: -37px -11px 25px 18px rgba(0,0,0,0.63);
-padding: 20px;
-}
-.estuvimos h2 {
-  font-size: 40px; color: gray; padding-bottom: 10px;
-}
-.prensa h2{font-size: 43px;color: grey; padding: 10px; margin: 10px}
-
-.publicaciones  {display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr ;
-  gap: 20px;
- }
-
-.publicaciones div img {
-  width: 350px;height: 350px;}
-
-@media screen and ( max-width: 710px) {
-.publicaciones{grid-template-columns: 1fr}
-} 
-
-@media screen and ( max-width: 659px) {
-  .fotosFoa{grid-template-columns: 1fr}
-  } 
-
